@@ -3,31 +3,27 @@ import 'package:flutter/material.dart';
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    //(DAY-3)Functions, Classes, Routes, Theme & Text
-    int days = 30; //hold integers
-    var add;
-
-    //Function
-    int sum1({int a = 12, int b = 22}) {
-      return a + b;
-    }
+    //(DAY-4)Adding image, login page, Elevated Button and google fonts
+    
     String name = 'PROFESSOR'; //hold string
     return MaterialApp(
         //Themes
-      themeMode: ThemeMode.dark,
-      theme: ThemeData(
-        brightness: Brightness.dark,
-      ),
+      // themeMode: ThemeMode.light,
+      // theme: ThemeData(
+      //   brightness: Brightness.light,
+      // ),
       home: Scaffold(
         appBar: AppBar(
-          title: Text("DAY 3"),
+          title: Text("DAY 4"),
           centerTitle: true,
           backgroundColor: Colors.deepOrange,
         ),
         body: Center(
-          child: Text("$days Days of Flutter by $name \n a + b = ${add=sum1()}"),
+          child: Text("30 Days of Flutter by $name"),
         ),
-        drawer: Drawer(),
+        drawer: Drawer(
+
+        ),
       ),
     );
   }
