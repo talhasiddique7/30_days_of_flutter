@@ -4,10 +4,10 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     //(DAY-5)singlechildscrollview and navigator
-    
+
     String name = 'PROFESSOR'; //hold string
     return MaterialApp(
-        //Themes
+      //Themes
       // themeMode: ThemeMode.light,
       // theme: ThemeData(
       //   brightness: Brightness.light,
@@ -21,9 +21,7 @@ class HomePage extends StatelessWidget {
         body: Center(
           child: Text("30 Days of Flutter by $name"),
         ),
-        drawer: Drawer(
-
-        ),
+        drawer: Drawer(),
       ),
     );
   }

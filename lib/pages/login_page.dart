@@ -9,67 +9,85 @@ class LoginPage extends StatelessWidget {
     return Material(
       child: Padding(
         padding: const EdgeInsets.all(30.0),
-        child: Builder(
-          builder: (context) {
-            return SingleChildScrollView(
-              child: Column(
-                children: <Widget>[
-                  Image.asset(
-                    'images/a2.png',
-                    width: 200,
-                  ),
-                  Text(
-                    "Login",
-                    style: TextStyle(
-                        fontFamily: "Young serif",
-                        fontSize: 26,
-                        fontWeight: FontWeight.w700),
-                  ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  TextFormField(
-                    decoration: InputDecoration(
-                      hintText: "username",
-                      labelText: 'User Name',
-                      border: OutlineInputBorder(),
+        child: Builder(builder: (context) {
+          return SingleChildScrollView(
+            child: Column(
+              children: <Widget>[
+                Image.asset(
+                  'images/a2.png',
+                  width: 200,
+                ),
+                Text(
+                  "Login",
+                  style: TextStyle(
+                      fontFamily: "Young serif",
+                      fontSize: 26,
+                      fontWeight: FontWeight.w700),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                TextFormField(
+                  decoration: InputDecoration(
+                    hintText: "username",
+                    labelText: 'User Name',
+                    border: OutlineInputBorder(
+                      borderSide: BorderSide(width: 2), //<-- SEE HERE
+                      borderRadius: BorderRadius.circular(40.0),
                     ),
                   ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  TextFormField(
-                    obscureText: true,
-                    decoration: InputDecoration(
-                      hintText: "password",
-                      labelText: 'Password',
-                      labelStyle: TextStyle(
-                        fontSize: 14,
-                      ),
-                      border: OutlineInputBorder(),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                TextFormField(
+                  obscureText: true,
+                  decoration: InputDecoration(
+                    hintText: "password",
+                    labelText: 'Password',
+                    border: OutlineInputBorder(
+                      borderSide: BorderSide(width: 2),
+                      borderRadius: BorderRadius.circular(40.0),
+                    ),
+                    labelStyle: TextStyle(
+                      fontSize: 14,
                     ),
                   ),
-                  Text("Forgot Password",
+                ),
+                // Text("Forgot Password",
+                //     style: TextStyle(
+                //       height: 2,
+                //       fontSize: 16,
+
+                //     )
+                //     ),
+                TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      'Forgot Password',
                       style: TextStyle(
-                        height: 2,
-                        fontSize: 16,
-                      )),
-                  ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color.fromARGB(255, 111, 76, 173),
+                        color: const Color.fromARGB(143, 0, 0, 0),
                       ),
-                      onPressed: () {
-                        Navigator.pushNamed(context, MyRoutes.HomeRoute);
-                      },
-                      child: Text(
-                        'Login',
-                        style: TextStyle(fontSize: 24),
-                      ))
-                ],
-              ),
-            );
-          }
-        ),
+                    )),
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      minimumSize: Size(330, 50),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(40.0)),
+                      backgroundColor: const Color.fromARGB(255, 111, 76, 173),
+                    ),
+                    onPressed: () {
+                      Navigator.pushNamed(context, MyRoutes.HomeRoute);
+                    },
+                    child: Text(
+                      'Login',
+                      style:
+                          TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                    ))
+              ],
+            ),
+          );
+        }),
       ),
     );
   }
