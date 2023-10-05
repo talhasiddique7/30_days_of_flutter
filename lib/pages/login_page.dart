@@ -1,4 +1,4 @@
-import 'package:days_30_flutter/pages/home_page.dart';
+
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
@@ -35,9 +35,11 @@ class LoginPage extends StatelessWidget {
                 height: 10,
               ),
               TextFormField(
-                decoration: InputDecoration(
+                obscureText: true,
+                decoration: InputDecoration(   
                   hintText: "password",
                   labelText: 'Password',
+                  
                   labelStyle: TextStyle(
                     fontSize: 14,
                   ),
