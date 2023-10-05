@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    //(DAY-4)Adding image, login page, Elevated Button and google fonts
+    //(DAY-5)singlechildscrollview and navigator
     
     String name = 'PROFESSOR'; //hold string
     return MaterialApp(
@@ -14,7 +14,7 @@ class HomePage extends StatelessWidget {
       // ),
       home: Scaffold(
         appBar: AppBar(
-          title: Text("DAY 4"),
+          title: Text("DAY 5"),
           centerTitle: true,
           backgroundColor: Colors.deepOrange,
         ),
