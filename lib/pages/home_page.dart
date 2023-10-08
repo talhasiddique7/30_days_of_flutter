@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    //(DAY-5)singlechildscrollview and navigator
+  
 
     String name = 'PROFESSOR'; //hold string
     return MaterialApp(

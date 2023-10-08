@@ -1,10 +1,19 @@
-//DAY 5
+//DAY 6
+//Stateless and stateful widget
+
 import 'package:days_30_flutter/pages/home_page.dart';
 import 'package:days_30_flutter/utilities/routes.dart';
 import 'package:flutter/material.dart';
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
   @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
+  @override
+  String name = '';
+  bool changebutton = false;
   Widget build(BuildContext context) {
     return Material(
       child: Padding(
@@ -18,7 +27,7 @@ class LoginPage extends StatelessWidget {
                   width: 200,
                 ),
                 Text(
-                  "Login",
+                  "Welcome $name",
                   style: TextStyle(
                       fontFamily: "Young serif",
                       fontSize: 26,
@@ -36,6 +45,11 @@ class LoginPage extends StatelessWidget {
                       borderRadius: BorderRadius.circular(40.0),
                     ),
                   ),
+                  onChanged: (value) {
+                    setState(() {
+                      name = value;
+                    });
+                  },
                 ),
                 SizedBox(
                   height: 10,
@@ -69,21 +83,46 @@ class LoginPage extends StatelessWidget {
                         color: const Color.fromARGB(143, 0, 0, 0),
                       ),
                     )),
-                ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      minimumSize: Size(330, 50),
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(40.0)),
-                      backgroundColor: const Color.fromARGB(255, 111, 76, 173),
-                    ),
-                    onPressed: () {
-                      Navigator.pushNamed(context, MyRoutes.HomeRoute);
-                    },
-                    child: Text(
+                InkWell(
+                  onTap: () {
+                    //Navigator.pushNamed(context, MyRoutes.HomeRoute);
+                    setState(() {
+                      changebutton = true;
+                    });
+                  },
+                  child: Container(
+                    width: changebutton?50:330,
+                    height: 50,
+                    alignment: Alignment.center,
+                    child: changebutton?Icon(Icons.done):Text(
                       'Login',
-                      style:
-                          TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-                    ))
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white),
+                    ),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(40.0),
+                      color: Colors.deepPurple,
+                    ),
+                  ),
+                ),
+
+                // ElevatedButton(
+                //     style: ElevatedButton.styleFrom(
+                //       minimumSize: Size(330, 50),
+                //       shape: RoundedRectangleBorder(
+                //           borderRadius: BorderRadius.circular(40.0)),
+                //       backgroundColor: const Color.fromARGB(255, 111, 76, 173),
+                //     ),
+                //     onPressed: () {
+                //       Navigator.pushNamed(context, MyRoutes.HomeRoute);
+                //     },
+                //     child: Text(
+                //       'Login',
+                //       style:
+                //           TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                //     ))
               ],
             ),
           );
