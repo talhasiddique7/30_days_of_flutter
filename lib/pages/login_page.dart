@@ -1,5 +1,5 @@
-//DAY 6
-//Stateless and stateful widget
+//DAY 7
+//UQuestion Answers
 
 import 'package:days_30_flutter/pages/home_page.dart';
 import 'package:days_30_flutter/utilities/routes.dart';
