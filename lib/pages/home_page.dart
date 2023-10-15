@@ -5,6 +5,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
           
@@ -17,6 +18,15 @@ class HomePage extends StatelessWidget {
           elevation: 0,
           iconTheme:IconThemeData(color: Colors.black),
         ),
+        body: Column(
+            children: [
+              Container(
+                height: 100,
+                width: 100,
+                color: Colors.red,
+              ),
+            ],
+          ),
         drawer: MyDrawer(),
       ),
     );
