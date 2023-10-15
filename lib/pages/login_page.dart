@@ -1,5 +1,5 @@
-//DAY 7
-//UQuestion Answers
+//DAY 9
+
 
 import 'package:days_30_flutter/pages/home_page.dart';
 import 'package:days_30_flutter/utilities/routes.dart';
@@ -95,7 +95,7 @@ class _LoginPageState extends State<LoginPage> {
                         return "Password Cannot be empty";
                       } else {
                         if (value.length < 6) {
-                          return "Password must be grater than 6 letters";
+                          return "Password must be greater than 5 letters";
                         }
                         else{
                           return null;
