@@ -1,4 +1,4 @@
-//Day 10 - Models | AppBarTheme | Extracting Theme
+//Day 12 - ListView Builder, List Generate, Card & Asserts
 import 'package:days_30_flutter/pages/login_page.dart';
 import 'package:days_30_flutter/utilities/routes.dart';
 import 'package:flutter/material.dart';
