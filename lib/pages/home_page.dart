@@ -1,4 +1,4 @@
-//Day 13 - Local Files | Load & Decode JSON
+////Day 14 - QNA
 import 'package:days_30_flutter/models/catalog.dart';
 import 'package:days_30_flutter/widgets/ItemWidgets.dart';
 import 'package:days_30_flutter/widgets/drawer.dart';
